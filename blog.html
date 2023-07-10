@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Блог</title>
-  <link rel="preload" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin> <!--Добавил предзагрузку шрифтов-->
-  <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
-
+  <link rel="prefetch" href="fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin> <!--Добавил предзагрузку шрифтов-->
+  <link rel="prefetch" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+  
   <link rel="stylesheet" href="style/style.css">
+  <script type="module" src="/script/script.js"></script>
+  <title>Блог</title>
 </head>
 
 <body>
@@ -20,8 +21,10 @@
             <img class="item__image" src="./image/shoes.jpg" alt="Коричневые туфли из нубука">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Как ухаживать за обувью 
-              из кожи</h2>
+            <h2 class="item__title">
+              <a href="#">Как ухаживать за обувью 
+                из кожи</a>
+            </h2>
             <p class="item__date">22 октября 2021, 12:45</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.2K</span>
@@ -34,7 +37,9 @@
             <img class="item__image" src="./image/mounting_lake.jpg" alt="Озеро Байкал на фоне гор">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Неизведанные места озера Байкал</h2>
+            <h2 class="item__title">
+              <a href="#">Неизведанные места озера Байкал</a>
+            </h2>
             <p class="item__date">06 марта 2020, 15:34</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">2.3K</span>
@@ -47,7 +52,9 @@
             <img class="item__image" src="./image/foks.jpg" alt="Лиса вблизи">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Можно ли приручить дикую лису?</h2>
+            <h2 class="item__title">
+              <a href="#">Можно ли приручить дикую лису?</a>
+            </h2>
             <p class="item__date">19 октября 2021, 10:23</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.9K</span>
@@ -60,7 +67,9 @@
             <img class="item__image" src="./image/freelance.jpg" alt="Человек работает за ноутбуком">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Лучшие модели ноутбуков для фриланса</h2>
+            <h2 class="item__title">
+              <a href="#">Лучшие модели ноутбуков для фриланса</a>
+            </h2>
             <p class="item__date">03 август 2021, 12:54</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.6K</span>
@@ -73,8 +82,9 @@
             <img class="item__image" src="./image/orange.jpg" alt="Несколько мандаринов лежат на синем столе">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">10 необычных блюд 
-              из мандаринов</h2>
+            <h2 class="item__title">
+              <a href="#">10 необычных блюд из мандаринов</a>
+            </h2>
             <p class="item__date">25 апреля 2020, 12:24</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">3.2K</span>
@@ -87,7 +97,9 @@
             <img class="item__image" src="./image/man.jpg" alt="Человек в очках круппным планом">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Люди, изменившие digital индустрию</h2>
+            <h2 class="item__title">
+              <a href="#">Люди, изменившие digital индустрию</a>
+            </h2>
             <p class="item__date">24 мая 2020, 19:31</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">3,6K</span>
@@ -100,7 +112,9 @@
             <img class="item__image" src="./image/design.jpg" alt="Ноутбук и телефон в руках у человека">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Современные программы для дизайнера</h2>
+            <h2 class="item__title">
+              <a href="#">Современные программы для дизайнера</a>
+            </h2>
             <p class="item__date">22 октября 2021, 12:45</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.2K</span>
@@ -113,7 +127,9 @@
             <img class="item__image" src="./image/plant.jpg" alt="Комнатное растение в горшке">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Самый неприхотливые домашние растения</h2>
+            <h2 class="item__title">
+              <a href="#">Самый неприхотливые домашние растения</a>
+            </h2>
             <p class="item__date">19 октября 2021, 10:23</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.7K</span>
@@ -126,7 +142,9 @@
             <img class="item__image" src="./image/plant_in_the_hand.jpg" alt="Комнатное растение в женской руке">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Как вырастить герберу в домашних условиях</h2>
+            <h2 class="item__title">
+              <a href="#">Как вырастить герберу в домашних условиях</a>
+            </h2>
             <p class="item__date">06 марта 2020, 15:34</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">1.9K</span>
@@ -139,7 +157,9 @@
             <img class="item__image" src="./image/interier.jpg" alt="Интерьер комнаты в белом дизайне">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Идеи для современного интерьера</h2>
+            <h2 class="item__title">
+              <a href="#">Идеи для современного интерьера</a>
+            </h2>
             <p class="item__date">29 октября 2020, 12:42</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">4.2K</span>
@@ -152,7 +172,9 @@
             <img class="item__image" src="./image/stairs.jpg" alt="Круговая лестниуы - вид сверху">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Искусство фотографии</h2>
+            <h2 class="item__title">
+              <a href="#">Искусство фотографии</a>
+            </h2>
             <p class="item__date">21 декабря 2020, 15:34</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">3.1K</span>
@@ -165,7 +187,9 @@
             <img class="item__image" src="./image/yarn.jpg" alt="Цветные клубки пряжы на столе">
           </div>
           <div class="item__desc-wrapper">
-            <h2 class="item__title">Необычная пряжа</h2>
+            <h2 class="item__title">
+              <a href="#">Необычная пряжа</a>
+            </h2>
             <p class="item__date">27 нобря 2020, 08:24</p>
             <div class="item__icons-wrapper">
               <span class="item__icons-review">0.6K</span>
@@ -174,6 +198,35 @@
           </div>
         </li>
       </ul>
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item-previous nav__item-control">
+            <a href="" class="nav__link nav__link-previous nav__link-disabled">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.375 16.9583H10.5296L16.0487 11.4237L13.875 9.25L4.625 18.5L13.875 27.75L16.0487 25.5762L10.5296 20.0417H32.375V16.9583Z"/>
+              </svg>                
+            </a>
+          </li>
+          <div class="nav__item-container">
+            <li class="nav__item nav__item-current">
+              <a href="" class="nav__link nav__link-current">1</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">2</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">3</a>
+            </li>
+          </div>
+          <li class="nav__item nav__item-next nav__item-control">
+            <a href="" class="nav__link">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.625 16.9583H26.4704L20.9513 11.4237L23.125 9.25L32.375 18.5L23.125 27.75L20.9513 25.5763L26.4704 20.0417H4.625V16.9583Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </section>
 
