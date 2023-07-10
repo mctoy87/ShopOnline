@@ -1,8 +1,7 @@
 'use strict';
 const postsList = document.querySelector('.list');
-const navList = document.querySelector('.nav__item-container');
-console.log('postslist: ', postsList);
-console.log('navList: ', navList);
+const navList = document.querySelector('.nav__list');
+
 
   const getPostData = async () => {
   const pageParams = new URLSearchParams(location.search);
@@ -11,9 +10,6 @@ console.log('navList: ', navList);
   
   const response = await fetch(`https://gorest.co.in/public-api/posts?page=${postPage === null ? 1 : postPage}`);
   const result = await response.json();
-  console.log(result);
-  console.log(`result.data`, result.data);
-  console.log('pagination: ', result.meta.pagination);
 
   return {
       data: result.data,
@@ -75,10 +71,9 @@ const createPostNav = async () => {
       `;
     }
 
-    navList.innerHTML = postNav;
     counter += 1;
+    navList.innerHTML = postNav;
   }
-
 };
 
 getPostData();
