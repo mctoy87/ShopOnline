@@ -1,22 +1,22 @@
-'use strict';
+
 const postsList = document.querySelector('.list');
 const navList = document.querySelector('.nav__list');
 
 
-  const getPostData = async () => {
+const getPostData = async () => {
   const pageParams = new URLSearchParams(location.search);
   const postPage = pageParams.get('page');
 
-  
+
   const response = await fetch(`https://gorest.co.in/public-api/posts?page=${postPage === null ? 1 : postPage}`);
   const result = await response.json();
 
   return {
-      data: result.data,
-      pagination: result.meta.pagination,
-      ueserId: result.data.user_id
-  }
-}
+    data: result.data,
+    pagination: result.meta.pagination,
+    ueserId: result.data.user_id,
+  };
+};
 
 const createPostList = async () => {
   const posts = await getPostData();
@@ -26,7 +26,7 @@ const createPostList = async () => {
     postItem += `
       <li class="list__item">
         <div class="item__image-wrapper">
-          <img class="item__image" src="" alt="">
+          <img class="item__image" src="https://loremflickr.com/400/400?${i+1}" alt="Картинка к посту">
         </div>
         <div class="item__desc-wrapper">
           <h2 class="item__title">
@@ -49,34 +49,36 @@ const createPostList = async () => {
 
 const createPostNav = async () => {
   const pagination = await getPostData();
-  let postNav ='';
+  let postNav = '';
 
-  let counter = 0;
-  for (let i =1; i < pagination.pagination.pages; i++) {
-    if (counter < 3) {
-      postNav += `
+  // let counter = 0;
+  for (let i = 1; i < pagination.pagination.pages; i++) {
+    // if (counter < 3) {
+    postNav += `
     <li class="nav__item">
       <a href="blog.html?page=${i}" class="nav__link">
         ${i}
       </a>
     </li>
     `;
-    } else {
-      postNav += `
-      <li class="nav__item visually-hidden">
-        <a href="blog.html?page=${i}" class="nav__link">
-          ${i}
-        </a>
-      </li>
-      `;
-    }
+    // } else {
+    //   postNav += `
+    //   <li class="nav__item visually-hidden">
+    //     <a href="blog.html?page=${i}" class="nav__link">
+    //       ${i}
+    //     </a>
+    //   </li>
+    //   `;
+    // }
 
-    counter += 1;
+    // counter += 1;
     navList.innerHTML = postNav;
+    navList.style.overflow = 'auto';
   }
 };
 
 getPostData();
-createPostList();
-createPostNav();
+
+if (postsList) createPostList();
+if (navList) createPostNav();
 

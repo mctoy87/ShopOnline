@@ -1,0 +1,223 @@
+.goods {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.goods__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(245px, 1fr)) minmax(550px, 2fr) repeat(2, minmax(245px, 1fr));
+    grid-template-rows: repeat(4, 245px);
+    grid-template-areas: 
+        "book time snickers presents presents"
+        "red_boot red_boot snickers tv tv"
+        "new_year new_year new_year girl chemical"
+        "new_year new_year new_year girl balls"
+    ;
+    gap: 60px;
+}
+/* общие стили для картинок в ul */
+.goods__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+/* общие стили для ссылок в ul */
+.goods__link {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+/* общие стили для текста в ul */
+.goods__text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.good__text-regular {
+    font-weight: 400;
+}
+
+.goods__text--fz-30 {
+    font-size: 30px;
+}
+
+.goods__text--blue {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+}
+
+.good__text--bold-blue {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+}
+
+.goods__text-wrap--blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 476px;
+    height: 167px;
+    background-color: #38C0EB;
+    border-radius: 20px;    
+    padding: 0 20px;
+}
+
+.goods__text-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 643px;
+    height: 108px;
+    background-color: #FFFFFF;
+    border-radius: 20px;    
+    text-align: center;
+}
+
+.goods__text--red{
+    line-height: 120%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #F91155;
+}
+
+/* стили для ссылок в айтемах в ul */
+.goods__link_1 {
+    padding: 90px 35px 27px 20px;
+}
+
+.goods__link_2 {
+    padding: 77px 0 0 14px;
+}
+
+.goods__link_4 {
+    padding: 329px 20px 20px;
+}
+
+.goods__link_5 {
+    padding: 94px 180px 0 30px;
+}
+
+.goods__link_6 {
+    padding: 136px 0 0 30px;
+}
+
+.goods__link_7 {
+    padding: 358px 0 0 50px;
+}
+
+.goods__link_9 {
+    padding-left: 20px;
+}
+
+/* Общие стили для штампика со скидкой на картинке */
+.goods__img::before {
+    position: absolute;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    text-align: center;
+  
+    bottom: 20px;
+    right: 27px;
+  
+    width: 88px;
+    height: 88px;
+    background-color: #FFBD13;
+    border-radius: 50%;
+    display: flex;              /*Выравнивает скидку внутри :before*/
+    justify-content: center;
+    align-items: center;
+  }
+
+/* стили для айтемов в ul */
+.goods__item--1{
+    background-image: url("../images/book.jpg");
+    grid-area: book;
+}
+
+.goods__item--2 {
+    position: relative;
+    background-image: url("../images/clock.jpg");
+    grid-area: time;
+}
+.goods__item--2::before {
+    content: "-25%";
+}
+
+.goods__item--3 {
+    position: relative;
+    background-image: url("../images/red_snicker.jpg");
+    grid-area: red_boot;
+}
+
+.goods__item--3::before {
+    content: "-40%";
+    top: 20px;
+    left: 20px;
+}
+
+.goods__item--4 {
+    background-image: url("../images/snickers.jpg");
+    grid-area: snickers;
+}
+
+.goods__item--5 {
+    background-image: url("../images/christmas_present.jpg");
+    grid-area: presents;
+}
+
+.goods__item--6 {
+    position: relative;
+    background-image: url("../images/laptop.jpg");
+    grid-area: tv;
+}
+
+.goods__item--6::before {
+    content: "-15%";
+}
+
+.goods__item--7 {
+    background-image: url("../images/2022.jpg");
+    grid-area: new_year;
+}
+
+.goods__item--8 {
+    position: relative;
+    background-image: url("../images/girl.jpg");
+    grid-area: girl;
+}
+
+.goods__item--8::before {
+    content: "-55%";
+}
+
+.goods__item--9 {
+    position: relative;
+    background-image: url("../images/chemicals.jpg");
+    grid-area: chemical;
+}
+
+.goods__item--9::before {
+    content: "-25%";
+    top: 20px;
+    left: 20px;
+}
+
+.goods__text--chemicals{
+    position: absolute;
+    bottom: 37px;
+}
+
+.goods__item--10 {
+    background-image: url("../images/christmas_balls.jpg");
+    grid-area: balls;
+}

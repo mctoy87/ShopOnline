@@ -1,5 +1,6 @@
 .page {
-  padding: 100px 0;
+  padding: 15px 0 150px;
+  color: var(--3, #2D2D2D);
 }
 
 .item__title {
@@ -13,7 +14,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 195px;
   justify-content: space-between;
-  gap: 50px 0;
+  gap: 50px 100px;
+  margin-bottom: 100px;
 }
 
 .list__item {
@@ -71,21 +73,22 @@ gap: 25px;
 }
 
 .item__icons-review::before {
-  background-image: url('../image/review.svg');
+  background-image: url('../images/review.svg');
 }
 
 .item__icons-comment::before {
-  background-image: url('../image/comment.svg');
+  background-image: url('../images/comment.svg');
 }
 
 .nav {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav__list {
   display: flex;
-  gap: 30px;
+  gap: 6px;
 }
 
 .nav__item {
@@ -96,6 +99,10 @@ gap: 25px;
   height: 36px;
   border: 2px solid #2D2D2D;
   border-radius: 4px;
+}
+
+.nav__item:last-of-type {
+  margin-right: 24px;
 }
 
 .nav__item-container {
@@ -110,8 +117,13 @@ gap: 25px;
   color: #3670C7;
 }
 
+.nav__link-previous {
+  margin-right: 24px;
+}
+
 .nav__item-current {
   border: 2px solid var(--2, #3670C7);
+
 }
 
 .nav__link {
